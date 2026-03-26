@@ -1,0 +1,92 @@
+/* This targets the top-level section of your Contact component */
+/* If you haven't added a class to it yet, this selector will find it */
+section:has(.LoginForm), 
+.contact-section-wrapper {
+    background-color: #050505 !important; /* Forces the background to stay dark */
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Ensure the main tag inside doesn't have a white background either */
+section:has(.LoginForm) main {
+    background: transparent !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* The Background Aura (Glow Effect) */
+section:has(.LoginForm)::before {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(188, 19, 254, 0.12) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* The Form Box */
+.LoginForm {
+    background: #111 !important; /* Solid dark grey for the form card */
+    border: 4px solid #fff;
+    padding: 45px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 15px 15px 0px #bc13fe; /* Purple shadow */
+    position: relative;
+    z-index: 10;
+}
+
+/* Fix for Input Fields to ensure they aren't white */
+.LoginForm input, 
+.LoginForm textarea {
+    background-color: #000 !important;
+    border: 2px solid #333;
+    color: #00f3ff !important; /* Cyan text */
+    padding: 15px;
+    width: 100%;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.LoginForm label {
+    color: #fff !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Submit Button */
+.LoginForm button[type="submit"] {
+    width: 100%;
+    background: #00f3ff;
+    color: #000;
+    border: 3px solid #000;
+    padding: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s;
+    box-shadow: 6px 6px 0px #fff;
+}
+
+.LoginForm button[type="submit"]:hover {
+    background: #fff;
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0px #bc13fe;
+}
