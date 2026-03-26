@@ -37,7 +37,7 @@ export const Contact=()=>{
            const handleSubmit=async (e)=>{
             e.preventDefault();
             console.log(user);
-            const response=await fetch("http://localhost:5000/api/form/contact",{
+            const response=await fetch("https://mern-portfolio-kwz6.onrender.com/api/form/contact",{
                 method:"POST",
                  headers:{
                 "Content-Type":"application/json"
