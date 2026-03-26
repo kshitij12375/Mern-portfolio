@@ -10,7 +10,7 @@ const connectDB=require('./utils/db');
 const errorMiddleware=require('./middlewares/error-middleware');
 
 const corsOptions={
-    origin:"https://mern-portfolio-pink.vercel.app/",
+    origin:"https://mern-portfolio-pink.vercel.app",
     method:"POST,GET,PUT,DELETE,PATCH,HEAD",
     credentials:true,
 }
