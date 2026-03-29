@@ -1,6 +1,49 @@
-body, html {
-    background-color: #050505;
+:root {
+    --page-bg: #020207;
+    --surface: #090a10;
+    --surface-2: #12131d;
+    --text: #f5f7ff;
+    --muted: #94a1b2;
+    --accent: #00f3ff;
+    --accent2: #bc13fe;
+    --highlight: #fff;
+    --radius: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
     padding: 0;
-    color: white;
+    min-height: 100%;
+    color: var(--text);
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    background: radial-gradient(circle at 20% 10%, rgba(0,243,255,0.18), transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(188,19,254,0.14), transparent 45%),
+                linear-gradient(135deg, #020207 0%, #090a10 50%, #040508 100%);
+}
+
+body::selection {
+    background: rgba(0,243,255,0.45);
+    color: #020207;
+}
+
+a, button, input, textarea {
+    font: inherit;
+}
+
+a { color: var(--accent); text-decoration: none; }
+
+a:hover { color: var(--accent2); }
+
+img, video { max-width: 100%; height: auto; }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
 }

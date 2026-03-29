@@ -90,3 +90,43 @@ section:has(.LoginForm)::before {
     transform: translate(-3px, -3px);
     box-shadow: 10px 10px 0px #bc13fe;
 }
+@media (max-width: 840px) {
+    .contact-section-wrapper {
+        padding: 90px 16px;
+    }
+    .LoginForm {
+        padding: 28px;
+        max-width: 95%;
+        border-radius: 16px;
+    }
+    .LoginForm input,
+    .LoginForm textarea {
+        padding: 13px;
+    }
+}
+
+@media (max-width: 620px) {
+    .contact-section-wrapper { padding: 80px 12px; }
+    .LoginForm { padding: 24px; }
+    .LoginForm label { font-size: 0.78rem; }
+    .LoginForm input, .LoginForm textarea { font-size: 0.95rem; }
+}
+
+@media (max-width: 520px) {
+    .contact-section-wrapper {
+        padding: 70px 12px;
+    }
+    .LoginForm {
+        padding: 20px;
+        border-width: 2px;
+    }
+    .LoginForm label { font-size: 0.75rem; }
+    .LoginForm button[type="submit"] { padding: 12px; font-size: 0.85rem; }
+}
+
+@media (max-width: 420px) {
+    .contact-section-wrapper { padding: 60px 10px; }
+    .LoginForm { padding: 16px; }
+    section:has(.LoginForm)::before { width: 550px; height: 550px; }
+    .LoginForm button[type="submit"] { font-size: 0.8rem; padding: 11px; }
+}

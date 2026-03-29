@@ -127,9 +127,32 @@ section:has(.registration-form)::before {
     font-size: 0.8rem;
 }
 
+@media (max-width: 680px) {
+    section:has(.registration-form) {
+        padding: 80px 16px;
+    }
+    .registration-form {
+        padding: 35px;
+        max-width: 92%;
+    }
+}
+
 @media (max-width: 500px) {
     .registration-form {
-        padding: 30px 20px;
+        padding: 30px 18px;
         margin: 10px;
     }
+    .registration-form label {
+        font-size: 0.72rem;
+    }
+    .registration-form input { padding: 10px 12px; }
+    .registration-form .btn { padding: 13px; font-size: 0.9rem; }
+}
+
+@media (max-width: 420px) {
+    .registration-form {
+        padding: 24px 14px;
+        border-width: 2px;
+    }
+    .registration-form::before { top: -16px; left: 14px; font-size: 0.65rem; }
 }

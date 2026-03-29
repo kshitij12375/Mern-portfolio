@@ -166,6 +166,35 @@
     50% { opacity: 0; }
 }
 
+@media (max-width: 900px) {
+    .project-main { padding: 110px 15px 60px; }
+    .project-title { font-size: 4rem; }
+    .project-subtitle { max-width: 100%; }
+}
+
+@media (max-width: 760px) {
+    .project-grid { gap: 25px; }
+    .project-card { padding: 20px; }
+    .card-image-placeholder { height: 170px; }
+    .project-title { font-size: 3.2rem; }
+}
+
 @media (max-width: 600px) {
-    .project-title { font-size: 3rem; }
+    .project-main { padding: 90px 11px 45px; }
+    .project-title { font-size: 2.75rem; }
+    .project-subtitle { font-size: 0.95rem; }
+    .tech-stack-tags { gap: 8px; }
+}
+
+@media (max-width: 480px) {
+    .project-main { padding: 80px 10px 40px; }
+    .project-title { font-size: 2.1rem; }
+    .card-image-placeholder { height: 150px; }
+    .project-card { padding: 18px; }
+    .view-project-btn { padding: 12px; }
+}
+
+@media (max-width: 420px) {
+    .project-title { font-size: 1.95rem; }
+    .project-card { border-width: 2px; }
 }
